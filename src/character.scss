@@ -1,0 +1,75 @@
+.character-wrapper {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--oc-gray-7);
+  }
+  &.active {
+    background-color: var(--oc-blue-9);
+  }
+}
+
+.character {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+
+  // ! cspell: disable
+  &.Antonio {
+    background-image: url('../public/characters/Select-Antonio.webp');
+  }
+  &.Imelda {
+    background-image: url('../public/characters/Select-Imelda.webp');
+  }
+  &.Pasqualina {
+    background-image: url('../public/characters/Select-Pasqualina.webp');
+  }
+  &.Gennaro {
+    background-image: url('../public/characters/Select-Gennaro.webp');
+  }
+  &.Arca {
+    background-image: url('../public/characters/Select-Arca.webp');
+  }
+  &.Porta {
+    background-image: url('../public/characters/Select-Porta.webp');
+  }
+  &.Lama {
+    background-image: url('../public/characters/Select-Lama.webp');
+  }
+  &.Poe {
+    background-image: url('../public/characters/Select-Poe.webp');
+  }
+  &.Clerici {
+    background-image: url('../public/characters/Select-Clerici.webp');
+  }
+  &.Dommario {
+    background-image: url('../public/characters/Select-Dommario.webp');
+  }
+  &.Krochi {
+    background-image: url('../public/characters/Select-Krochi.webp');
+  }
+  &.Christine {
+    background-image: url('../public/characters/Select-Christine.webp');
+  }
+  &.Pugnala {
+    background-image: url('../public/characters/Select-Pugnala.webp');
+  }
+  &.Poppea {
+    background-image: url('../public/characters/Select-Poppea.webp');
+  }
+  &.Mortaccio {
+    background-image: url('../public/characters/Select-Mortaccio.webp');
+  }
+  &.Cavallo {
+    background-image: url('../public/characters/Select-Cavallo.webp');
+  }
+  &.Exdash {
+    background-image: url('../public/characters/Select-Exdash.webp');
+  }
+  &.RedDeath {
+    background-image: url('../public/characters/Select-Red_Death.webp');
+  }
+
+  // ! cspell: enable
+}

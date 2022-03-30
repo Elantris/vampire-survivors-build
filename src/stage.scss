@@ -1,0 +1,41 @@
+.stage {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--oc-gray-7);
+  }
+  &.active {
+    background-color: var(--oc-blue-9);
+  }
+}
+
+.stage-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: calc(9200% / 150);
+  }
+
+  // ! cspell: disable
+  &.Stage-1 {
+    background-image: url('../public/stages/Stage-Mad_Forest.webp');
+  }
+  &.Stage-2 {
+    background-image: url('../public/stages/Stage-Inlaid_Library.webp');
+  }
+  &.Stage-3 {
+    background-image: url('../public/stages/Stage-Dairy_Plant.webp');
+  }
+  &.Challenge {
+    background-image: url('../public/stages/Stage-Green_Acres.webp');
+  }
+  &.Bonus {
+    background-image: url('../public/stages/Stage-Il_Molise.webp');
+  }
+  // ! cspell: enable
+}
