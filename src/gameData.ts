@@ -69,6 +69,10 @@ export const CHARACTERS: {
     name: 'Yatta Cavallo',
     weaponIds: ['CherryBomb'],
   },
+  Ramba: {
+    name: 'Bianca Ramba',
+    weaponIds: ['Carrello'],
+  },
   Exdash: {
     name: 'Exdash Exiviiq',
     weaponIds: ['EbonyWings'],
@@ -96,6 +100,10 @@ export const STAGES: {
   'Stage-3': {
     name: 'Dairy Plant',
     itemIds: ['Attractorb', 'Candelabrador', 'Wings', 'Armor'],
+  },
+  'Stage-4': {
+    name: 'Gallo Tower',
+    itemIds: ['Bracer', 'Spellbinder'],
   },
   Challenge: {
     name: 'Green Acres',
@@ -196,6 +204,15 @@ export const ITEMS: {
     type: 'evolved-weapon',
     required: ['SantaWater', 'Attractorb'],
   },
+  Runetracer: {
+    name: 'Runetracer',
+    type: 'weapon',
+  },
+  NoFuture: {
+    name: 'NO FUTURE',
+    type: 'evolved-weapon',
+    required: ['Runetracer', 'Armor']
+  },
   LightningRing: {
     name: 'Lightning Ring',
     type: 'weapon',
@@ -214,15 +231,6 @@ export const ITEMS: {
     type: 'evolved-weapon',
     required: ['Pentagram', 'Crown'],
   },
-  SongOfMana: {
-    name: 'Song of Mana',
-    type: 'weapon',
-  },
-  Mannajja: {
-    name: 'Mannajja',
-    type: 'evolved-weapon',
-    required: ['SongOfMana', 'SkullOManiac'],
-  },
   PhieraDerTuphello: {
     name: 'Phiera Der Tuphello',
     type: 'weapon',
@@ -236,6 +244,15 @@ export const ITEMS: {
     type: 'evolved-weapon',
     required: ['PhieraDerTuphello', 'EightTheSparrow', 'Tiragisu'],
     extraSlots: 1,
+  },
+  SongOfMana: {
+    name: 'Song of Mana',
+    type: 'weapon',
+  },
+  Mannajja: {
+    name: 'Mannajja',
+    type: 'evolved-weapon',
+    required: ['SongOfMana', 'SkullOManiac'],
   },
   Peachone: {
     name: 'Peachone',
@@ -251,10 +268,6 @@ export const ITEMS: {
     required: ['Peachone', 'EbonyWings'],
     extraSlots: 1,
   },
-  Runetracer: {
-    name: 'Runetracer',
-    type: 'weapon',
-  },
   ClockLancet: {
     name: 'Clock Lancet',
     type: 'weapon',
@@ -269,6 +282,10 @@ export const ITEMS: {
   },
   CherryBomb: {
     name: 'Cherry Bomb',
+    type: 'weapon',
+  },
+  Carrello: {
+    name: 'Carréllo',
     type: 'weapon',
   },
   Spinach: {
@@ -327,12 +344,12 @@ export const ITEMS: {
     name: 'Stone Mask',
     type: 'accessory',
   },
-  Tiragisu: {
-    name: 'Tiragisú',
-    type: 'accessory',
-  },
   SkullOManiac: {
     name: "Skull O'Maniac",
+    type: 'accessory',
+  },
+  Tiragisu: {
+    name: 'Tiragisú',
     type: 'accessory',
   },
 }

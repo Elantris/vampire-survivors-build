@@ -93,6 +93,12 @@
   &.LaBorra {
     background-image: url('../public/items/Sprite-La_Borra.webp');
   }
+  &.Runetracer {
+    background-image: url('../public/items/Sprite-Runetracer.webp');
+  }
+  &.NoFuture {
+    background-image: url('../public/items/Sprite-NO_FUTURE.webp');
+  }
   &.LightningRing {
     background-image: url('../public/items/Sprite-Lightning_Ring.webp');
   }
@@ -105,12 +111,6 @@
   &.GorgeousMoon {
     background-image: url('../public/items/Sprite-Gorgeous_Moon.webp');
   }
-  &.SongOfMana {
-    background-image: url('../public/items/Sprite-Song_of_Mana.webp');
-  }
-  &.Mannajja {
-    background-image: url('../public/items/Sprite-Mannajja.webp');
-  }
   &.PhieraDerTuphello {
     background-image: url('../public/items/Sprite-Phiera_Der_Tuphello.webp');
   }
@@ -120,6 +120,12 @@
   &.Phieraggi {
     background-image: url('../public/items/Sprite-Phieraggi.webp');
   }
+  &.SongOfMana {
+    background-image: url('../public/items/Sprite-Song_of_Mana.webp');
+  }
+  &.Mannajja {
+    background-image: url('../public/items/Sprite-Mannajja.webp');
+  }
   &.Peachone {
     background-image: url('../public/items/Sprite-Peachone.webp');
   }
@@ -128,9 +134,6 @@
   }
   &.Vandalier {
     background-image: url('../public/items/Sprite-Vandalier.webp');
-  }
-  &.Runetracer {
-    background-image: url('../public/items/Sprite-Runetracer.webp');
   }
   &.ClockLancet {
     background-image: url('../public/items/Sprite-Clock_Lancet.webp');
@@ -143,6 +146,9 @@
   }
   &.CherryBomb {
     background-image: url('../public/items/Sprite-Cherry_Bomb.webp');
+  }
+  &.Carrello {
+    background-image: url('../public/items/Sprite-Carrello.webp');
   }
   &.Spinach {
     background-image: url('../public/items/Sprite-Spinach.webp');
@@ -186,11 +192,11 @@
   &.StoneMask {
     background-image: url('../public/items/Sprite-Stone_Mask.webp');
   }
-  &.Tiragisu {
-    background-image: url('../public/items/Sprite-Tiragisu.webp');
-  }
   &.SkullOManiac {
     background-image: url("../public/items/Sprite-Skull_O'Maniac.webp");
+  }
+  &.Tiragisu {
+    background-image: url('../public/items/Sprite-Tiragisu.webp');
   }
   // ! cspell: enable
 }

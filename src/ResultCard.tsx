@@ -21,8 +21,17 @@ const ResultCard: FC<{
 
   return (
     <Card>
-      <Card.Header>
-        <h2 className="mb-0">Patch 0.3.2</h2>
+      <Card.Header className="d-flex align-items-center">
+        <h2 className="mb-0 d-inline flex-grow-1">
+          <a
+            href="https://store.steampowered.com/news/app/1794680/view/3215014689196568012"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Patch 0.4.2
+          </a>
+        </h2>
+        <span>2022-04-06</span>
       </Card.Header>
       <Card.Body>
         <Row>
