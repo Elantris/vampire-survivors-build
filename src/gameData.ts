@@ -57,6 +57,10 @@ export const CHARACTERS: {
     name: 'Pugnala Provola',
     weaponIds: ['PhieraDerTuphello', 'EightTheSparrow'],
   },
+  Giovanna: {
+    name: 'Giovanna Grana',
+    weaponIds: ['GattiAmari'],
+  },
   Poppea: {
     name: 'Poppea Pecorina',
     weaponIds: ['SongOfMana'],
@@ -211,7 +215,7 @@ export const ITEMS: {
   NoFuture: {
     name: 'NO FUTURE',
     type: 'evolved-weapon',
-    required: ['Runetracer', 'Armor']
+    required: ['Runetracer', 'Armor'],
   },
   LightningRing: {
     name: 'Lightning Ring',
@@ -247,6 +251,10 @@ export const ITEMS: {
   },
   SongOfMana: {
     name: 'Song of Mana',
+    type: 'weapon',
+  },
+  GattiAmari: {
+    name: 'Gatti Amari',
     type: 'weapon',
   },
   Mannajja: {

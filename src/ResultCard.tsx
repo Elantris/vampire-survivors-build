@@ -28,10 +28,10 @@ const ResultCard: FC<{
             target="_blank"
             rel="noreferrer"
           >
-            Patch 0.4.2
+            Patch 0.5.0
           </a>
         </h2>
-        <span>2022-04-06</span>
+        <span>2022-04-13</span>
       </Card.Header>
       <Card.Body>
         <Row>
