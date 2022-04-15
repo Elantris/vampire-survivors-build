@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vampire-survivors-build/static/css/main.fb5d1227.css",
-    "main.js": "/vampire-survivors-build/static/js/main.a8888e47.js",
+    "main.css": "/vampire-survivors-build/static/css/main.5a3758f9.css",
+    "main.js": "/vampire-survivors-build/static/js/main.af56e735.js",
     "static/media/Stage-Green_Acres.webp": "/vampire-survivors-build/static/media/Stage-Green_Acres.24ed31ef822413827fa9.webp",
     "static/media/Select-Red_Death.webp": "/vampire-survivors-build/static/media/Select-Red_Death.f79adb013105bd6f95b7.webp",
     "static/media/Select-Poppea.webp": "/vampire-survivors-build/static/media/Select-Poppea.5ba811a807796872cb2d.webp",
@@ -17,6 +17,7 @@
     "static/media/Stage-Mad_Forest.webp": "/vampire-survivors-build/static/media/Stage-Mad_Forest.8887d1c7f4dc34e07ae8.webp",
     "static/media/Stage-Dairy_Plant.webp": "/vampire-survivors-build/static/media/Stage-Dairy_Plant.097fa3866ce782de085e.webp",
     "static/media/Stage-Il_Molise.webp": "/vampire-survivors-build/static/media/Stage-Il_Molise.f9a75ded04c9390cbe7b.webp",
+    "static/media/Select-Giovanna.webp": "/vampire-survivors-build/static/media/Select-Giovanna.516b22b3ec8386fefb92.webp",
     "static/media/Stage-Gallo_Tower.webp": "/vampire-survivors-build/static/media/Stage-Gallo_Tower.a2e12f370bd312285d51.webp",
     "static/media/Select-Pugnala.webp": "/vampire-survivors-build/static/media/Select-Pugnala.b651c45f9e18cfc0b4ae.webp",
     "static/media/Select-Gennaro.webp": "/vampire-survivors-build/static/media/Select-Gennaro.c74059dda907c6295488.webp",
@@ -30,6 +31,7 @@
     "static/media/Sprite-Lightning_Ring.webp": "/vampire-survivors-build/static/media/Sprite-Lightning_Ring.a3073f7808b04de240ac.webp",
     "static/media/Sprite-Holy_Wand.webp": "/vampire-survivors-build/static/media/Sprite-Holy_Wand.46599913e7bc79a58a6a.webp",
     "static/media/Sprite-Hellfire.webp": "/vampire-survivors-build/static/media/Sprite-Hellfire.9d7e3b6726f9eb927c67.webp",
+    "static/media/Sprite-Gatti_Amari.webp": "/vampire-survivors-build/static/media/Sprite-Gatti_Amari.9a29820e3e9716585c7e.webp",
     "index.html": "/vampire-survivors-build/index.html",
     "static/media/Sprite-Skull_O'Maniac.webp": "/vampire-survivors-build/static/media/Sprite-Skull_O'Maniac.f3f584ae502d4c882c1c.webp",
     "static/media/Sprite-Song_of_Mana.webp": "/vampire-survivors-build/static/media/Sprite-Song_of_Mana.ae1652445b6b099b5be2.webp",
@@ -81,11 +83,11 @@
     "static/media/Sprite-Hollow_Heart.webp": "/vampire-survivors-build/static/media/Sprite-Hollow_Heart.6e7589842cd8c5424dc0.webp",
     "static/media/Sprite-Runetracer.webp": "/vampire-survivors-build/static/media/Sprite-Runetracer.6ab7b3abe5c06ae2d3b4.webp",
     "static/media/Sprite-Bone.webp": "/vampire-survivors-build/static/media/Sprite-Bone.0135c0b4828910f1287f.webp",
-    "main.fb5d1227.css.map": "/vampire-survivors-build/static/css/main.fb5d1227.css.map",
-    "main.a8888e47.js.map": "/vampire-survivors-build/static/js/main.a8888e47.js.map"
+    "main.5a3758f9.css.map": "/vampire-survivors-build/static/css/main.5a3758f9.css.map",
+    "main.af56e735.js.map": "/vampire-survivors-build/static/js/main.af56e735.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb5d1227.css",
-    "static/js/main.a8888e47.js"
+    "static/css/main.5a3758f9.css",
+    "static/js/main.af56e735.js"
   ]
 }
