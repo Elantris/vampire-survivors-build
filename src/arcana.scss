@@ -1,0 +1,55 @@
+.arcana-wrapper {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--oc-gray-7);
+  }
+  &.active {
+    background-color: var(--oc-blue-9);
+  }
+}
+
+.arcana {
+  min-width: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: calc(17100% / 120);
+  }
+
+  // ! cspell: disable
+  &.IV {
+    background-image: url('../public/arcanas/Sprite-Awake.webp');
+  }
+  &.V {
+    background-image: url('../public/arcanas/Sprite-Chaos_in_the_Dark_Night.webp');
+  }
+  &.VI {
+    background-image: url('../public/arcanas/Sprite-Sarabande_of_Healing.webp');
+  }
+  &.VII {
+    background-image: url('../public/arcanas/Sprite-Iron_Blue_Will.webp');
+  }
+  &.XI {
+    background-image: url('../public/arcanas/Sprite-Waltz_of_Pearls.webp');
+  }
+  &.XVI {
+    background-image: url('../public/arcanas/Sprite-Slash.webp');
+  }
+  &.XVII {
+    background-image: url('../public/arcanas/Sprite-Lost_&_Found_Painting.webp');
+  }
+  &.XIX {
+    background-image: url('../public/arcanas/Sprite-Heart_of_Fire.webp');
+  }
+  // ! cspell: enable
+}
+
+.arcana-item-wrapper {
+  height: 3rem;
+}

@@ -34,11 +34,14 @@
   &.Stage-4 {
     background-image: url('../public/stages/Stage-Gallo_Tower.webp');
   }
-  &.Challenge {
+  &.Challenge-1 {
     background-image: url('../public/stages/Stage-Green_Acres.webp');
   }
   &.Bonus {
     background-image: url('../public/stages/Stage-Il_Molise.webp');
+  }
+  &.Challenge-2 {
+    background-image: url('../public/stages/Stage-The_Bone_Zone.webp');
   }
   // ! cspell: enable
 }

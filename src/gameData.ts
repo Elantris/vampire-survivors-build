@@ -77,6 +77,10 @@ export const CHARACTERS: {
     name: 'Bianca Ramba',
     weaponIds: ['Carrello'],
   },
+  OSole: {
+    name: "O'Sole Meeo",
+    weaponIds: ['CelestialDusting'],
+  },
   Exdash: {
     name: 'Exdash Exiviiq',
     weaponIds: ['EbonyWings'],
@@ -109,12 +113,16 @@ export const STAGES: {
     name: 'Gallo Tower',
     itemIds: ['Bracer', 'Spellbinder'],
   },
-  Challenge: {
+  Bonus: {
+    name: 'Il Molise',
+    itemIds: [],
+  },
+  'Challenge-1': {
     name: 'Green Acres',
     itemIds: [],
   },
-  Bonus: {
-    name: 'Il Molise',
+  'Challenge-2': {
+    name: 'The Bone Zone',
     itemIds: [],
   },
 }
@@ -296,6 +304,10 @@ export const ITEMS: {
     name: 'Carréllo',
     type: 'weapon',
   },
+  CelestialDusting: {
+    name: 'Celestial Dusting',
+    type: 'weapon',
+  },
   Spinach: {
     name: 'Spinach',
     type: 'accessory',
@@ -359,5 +371,56 @@ export const ITEMS: {
   Tiragisu: {
     name: 'Tiragisú',
     type: 'accessory',
+  },
+}
+
+export const ARCANAS: {
+  [key: string]: {
+    name: string
+    description: string
+    itemIds: string[]
+  }
+} = {
+  IV: {
+    name: 'Awake',
+    description:
+      'Gives +3 Revivals. Consuming a Revival gives +10% MaxHealth, +1 Armor, and +5% Might, Area, Duration, and Speed. ',
+    itemIds: ['Tiragisu'],
+  },
+  V: {
+    name: 'Chaos in the Dark Night',
+    description: 'Overall projectile Speed continuously changes between -50% and +200% over 10 seconds. ',
+    itemIds: ['Bracer'],
+  },
+  VI: {
+    name: 'Sarabande of Healing',
+    description: 'Healing is doubled. Recovering HP damages nearby enemies for the same amount. ',
+    itemIds: ['BloodyTear', 'SoulEater', 'CelestialDusting', 'Pummarola', 'FloorChicken'],
+  },
+  VII: {
+    name: 'Iron Blue Will',
+    description: 'Listed weapon projectiles gain up to 3 bounces and might pass through enemies and walls. ',
+    itemIds: ['Knife', 'ThousandEdge', 'Axe', 'DeathSpiral', 'PhieraDerTuphello', 'EightTheSparrow', 'Carrello'],
+  },
+  XI: {
+    name: 'Waltz of Pearls',
+    description: 'Listed weapon projectiles gain up to 3 bounces. ',
+    itemIds: ['MagicWand', 'HolyWand', 'FireWand', 'Hellfire', 'Cross', 'HeavenSword', 'Carrello'],
+  },
+  XVI: {
+    name: 'Slash',
+    description: 'Enables critical hits for listed weapons. Doubles overall critical damage. ',
+    itemIds: ['Knife', 'ThousandEdge', 'Whip', 'BloodyTear', 'Axe', 'DeathSpiral', 'HeavenSword'],
+  },
+  XVII: {
+    name: 'Lost & Found Painting',
+    description: 'Overall Duration continuously changes between -50% and +200% over 10 seconds. ',
+    itemIds: ['Spellbinder'],
+  },
+  XIX: {
+    name: 'Heart of Fire',
+    description:
+      'Listed weapon projectiles explode on impact. Light sources explode. Character explodes when damaged. ',
+    itemIds: ['FireWand', 'Hellfire', 'NormalBrazer'],
   },
 }

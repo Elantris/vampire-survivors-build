@@ -75,7 +75,7 @@ const CATEGORIES: {
   },
   {
     name: 'Other Weapons',
-    itemIds: ['ClockLancet', 'Laurel', 'Bone', 'CherryBomb', 'Carrello'],
+    itemIds: ['ClockLancet', 'Laurel', 'Bone', 'CherryBomb', 'Carrello', 'CelestialDusting'],
   },
   {
     name: 'Other Accessories',
@@ -93,10 +93,20 @@ type ItemInputValueProps = {
 const ItemInput: FC<{
   fixedWeaponIds?: string[]
   fixedAccessoryIds?: string[]
-  value: ItemInputValueProps
-  onChange: (newValue: ItemInputValueProps) => void
-}> = ({ fixedWeaponIds = [], fixedAccessoryIds = [], value, onChange }) => {
+  defaultValue?: ItemInputValueProps
+  onChange?: (newValue: ItemInputValueProps) => void
+}> = ({
+  fixedWeaponIds = [],
+  fixedAccessoryIds = [],
+  defaultValue = {
+    weaponIds: [],
+    evolvedWeaponIds: [],
+    accessoryIds: [],
+  },
+  onChange,
+}) => {
   const [isCollapse, setIsCollapse] = useState(true)
+  const [value, setValue] = useState(defaultValue)
   const activeITems = [
     ...fixedWeaponIds,
     ...fixedAccessoryIds,
@@ -106,60 +116,66 @@ const ItemInput: FC<{
   ]
 
   const handleClick = (itemId: string) => {
-    if (!onChange || fixedWeaponIds.includes(itemId) || fixedAccessoryIds.includes(itemId)) {
+    if (fixedWeaponIds.includes(itemId) || fixedAccessoryIds.includes(itemId)) {
       return
     }
     const item = ITEMS[itemId]
     if (item.type === 'weapon') {
-      const maxWeapons =
+      const maxWeaponSlots =
         6 - fixedWeaponIds.length + sum(value.evolvedWeaponIds.map(weaponId => ITEMS[weaponId].extraSlots || 0))
 
       if (value.weaponIds.includes(itemId)) {
-        onChange(
-          Object.assign({}, value, {
-            weaponIds: value.weaponIds.filter(v => v !== itemId),
-            evolvedWeaponIds: value.evolvedWeaponIds.filter(evolvedWeaponId =>
-              ITEMS[evolvedWeaponId].required?.every(requiredId => requiredId !== itemId),
-            ),
-          }),
-        )
-      } else if (value.weaponIds.length < maxWeapons) {
-        onChange(
-          Object.assign({}, value, {
-            weaponIds: [...value.weaponIds, itemId],
-          }),
-        )
+        // remove weapon
+        const newValue = Object.assign({}, value, {
+          weaponIds: value.weaponIds.filter(v => v !== itemId),
+          evolvedWeaponIds: value.evolvedWeaponIds.filter(evolvedWeaponId =>
+            ITEMS[evolvedWeaponId].required?.every(requiredId => requiredId !== itemId),
+          ),
+        })
+        setValue(newValue)
+        onChange?.(newValue)
+      } else if (value.weaponIds.length < maxWeaponSlots) {
+        // append weapon
+        const newValue = Object.assign({}, value, {
+          weaponIds: [...value.weaponIds, itemId],
+        })
+        setValue(newValue)
+        onChange?.(newValue)
       }
     } else if (item.type === 'evolved-weapon') {
       if (value.evolvedWeaponIds.includes(itemId)) {
-        onChange(
-          Object.assign({}, value, {
-            evolvedWeaponIds: value.evolvedWeaponIds.filter(v => v !== itemId),
-          }),
-        )
+        // remove evolved weapon
+        const newValue = Object.assign({}, value, {
+          evolvedWeaponIds: value.evolvedWeaponIds.filter(v => v !== itemId),
+        })
+        setValue(newValue)
+        onChange?.(newValue)
       } else if (item.required?.every(requiredId => activeITems.includes(requiredId))) {
-        onChange(
-          Object.assign({}, value, {
-            evolvedWeaponIds: [...value.evolvedWeaponIds, itemId],
-          }),
-        )
+        // append evolved weapon
+        const newValue = Object.assign({}, value, {
+          evolvedWeaponIds: [...value.evolvedWeaponIds, itemId],
+        })
+        setValue(newValue)
+        onChange?.(newValue)
       }
     } else if (item.type === 'accessory') {
       if (value.accessoryIds.includes(itemId)) {
-        onChange(
-          Object.assign({}, value, {
-            accessoryIds: value.accessoryIds.filter(v => v !== itemId),
-            evolvedWeaponIds: value.evolvedWeaponIds.filter(evolvedWeaponId =>
-              ITEMS[evolvedWeaponId].required?.every(requiredId => requiredId !== itemId),
-            ),
-          }),
-        )
+        // remove accessory
+        const newValue = Object.assign({}, value, {
+          accessoryIds: value.accessoryIds.filter(v => v !== itemId),
+          evolvedWeaponIds: value.evolvedWeaponIds.filter(evolvedWeaponId =>
+            ITEMS[evolvedWeaponId].required?.every(requiredId => requiredId !== itemId),
+          ),
+        })
+        setValue(newValue)
+        onChange?.(newValue)
       } else if (value.accessoryIds.length < 6) {
-        onChange(
-          Object.assign({}, value, {
-            accessoryIds: [...value.accessoryIds, itemId],
-          }),
-        )
+        // append accessory
+        const newValue = Object.assign({}, value, {
+          accessoryIds: [...value.accessoryIds, itemId],
+        })
+        setValue(newValue)
+        onChange?.(newValue)
       }
     }
   }

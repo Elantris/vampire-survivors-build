@@ -15,23 +15,24 @@ const ResultCard: FC<{
     evolvedWeaponIds: string[]
     accessoryIds: string[]
   }
-}> = ({ characterId, stageId, fixedItemIds, itemIds }) => {
+  arcanaIds: string[]
+}> = ({ characterId, stageId, fixedItemIds, itemIds, arcanaIds }) => {
   const weaponIds = [...fixedItemIds.weaponIds, ...itemIds.weaponIds]
-  const maxWeapons = 6 + sum(itemIds.evolvedWeaponIds.map(weaponId => ITEMS[weaponId].extraSlots || 0))
+  const maxWeaponSlots = 6 + sum(itemIds.evolvedWeaponIds.map(weaponId => ITEMS[weaponId].extraSlots || 0))
 
   return (
     <Card>
       <Card.Header className="d-flex align-items-center">
         <h2 className="mb-0 d-inline flex-grow-1">
           <a
-            href="https://store.steampowered.com/news/app/1794680/view/3215014689196568012"
+            href="https://store.steampowered.com/news/app/1794680/view/3216142491806926560"
             target="_blank"
             rel="noreferrer"
           >
-            Patch 0.5.0
+            Patch 0.5.1
           </a>
         </h2>
-        <span>2022-04-13</span>
+        <span>2022-04-26</span>
       </Card.Header>
       <Card.Body>
         <Row>
@@ -57,8 +58,8 @@ const ResultCard: FC<{
               {weaponIds.map(itemId => (
                 <div key={itemId} className={`item ${itemId} mr-2`} />
               ))}
-              {weaponIds.length < maxWeapons
-                ? new Array(maxWeapons - weaponIds.length)
+              {weaponIds.length < maxWeaponSlots
+                ? new Array(maxWeaponSlots - weaponIds.length)
                     .fill(0)
                     .map((v, i) => <div key={i} className="item available mr-2" />)
                 : null}
@@ -77,9 +78,15 @@ const ResultCard: FC<{
                 : null}
             </div>
 
-            <div className="d-flex">
+            <div className="d-flex mb-2">
               {STAGES[stageId].itemIds.map(itemId => (
                 <div key={itemId} className={`item ${itemId} mr-2`} />
+              ))}
+            </div>
+
+            <div className="d-flex">
+              {arcanaIds.map(arcanaId => (
+                <div key={arcanaId} className={`arcana ${arcanaId} mr-2`} />
               ))}
             </div>
           </Col>

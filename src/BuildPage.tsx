@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import { Container } from 'react-bootstrap'
+import ArcanaInput from './ArcanaInput'
 import CharacterInput from './CharacterInput'
 import { CHARACTERS, STAGES } from './gameData'
 import ItemInput from './ItemInput'
@@ -7,7 +8,7 @@ import ResultCard from './ResultCard'
 import StageInput from './StageInput'
 
 const BuildPage: FC = () => {
-  const [characterId, setCharacterId] = useState<string>('Antonio')
+  const [characterId, setCharacterId] = useState('Antonio')
   const [stageId, setStageId] = useState('Stage-1')
   const [itemIds, setItemIds] = useState<{
     weaponIds: string[]
@@ -18,6 +19,7 @@ const BuildPage: FC = () => {
     evolvedWeaponIds: [],
     accessoryIds: [],
   })
+  const [arcanaIds, setArcanaIds] = useState<string[]>([])
 
   return (
     <Container className="py-5">
@@ -30,12 +32,13 @@ const BuildPage: FC = () => {
             accessoryIds: STAGES[stageId].itemIds,
           }}
           itemIds={itemIds}
+          arcanaIds={arcanaIds}
         />
       </div>
 
       <div className="mb-4">
         <CharacterInput
-          value={characterId}
+          defaultValue={characterId}
           onChange={newValue => {
             setCharacterId(newValue)
             setItemIds(
@@ -51,7 +54,7 @@ const BuildPage: FC = () => {
 
       <div className="mb-4">
         <StageInput
-          value={stageId}
+          defaultValue={stageId}
           onChange={newValue => {
             setStageId(newValue)
             setItemIds(
@@ -68,9 +71,13 @@ const BuildPage: FC = () => {
         <ItemInput
           fixedWeaponIds={CHARACTERS[characterId].weaponIds}
           fixedAccessoryIds={STAGES[stageId].itemIds}
-          value={itemIds}
+          defaultValue={itemIds}
           onChange={newValue => setItemIds(newValue)}
         />
+      </div>
+
+      <div className="mb-4">
+        <ArcanaInput defaultValue={arcanaIds} onChange={newValue => setArcanaIds(newValue)} />
       </div>
     </Container>
   )

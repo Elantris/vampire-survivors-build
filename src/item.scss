@@ -25,8 +25,9 @@
   width: 100%;
   min-width: 1rem;
   max-width: 3rem;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   &:after {
     content: '';
@@ -153,6 +154,10 @@
   &.Carrello {
     background-image: url('../public/items/Sprite-Carrello.webp');
   }
+  &.CelestialDusting {
+    background-image: url('../public/items/Sprite-Celestial_Dusting.webp');
+  }
+
   &.Spinach {
     background-image: url('../public/items/Sprite-Spinach.webp');
   }
@@ -200,6 +205,13 @@
   }
   &.Tiragisu {
     background-image: url('../public/items/Sprite-Tiragisu.webp');
+  }
+
+  &.FloorChicken {
+    background-image: url('../public/items/Sprite-Floor_Chicken.webp');
+  }
+  &.NormalBrazer {
+    background-image: url('../public/items/Normal_brazer.webp');
   }
   // ! cspell: enable
 }

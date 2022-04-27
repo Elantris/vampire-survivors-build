@@ -3,14 +3,18 @@ import { Card, Col, Row } from 'react-bootstrap'
 import { STAGES } from './gameData'
 
 const StageInput: FC<{
-  value?: string
+  defaultValue?: string
   onChange?: (newValue: string) => void
-}> = ({ value, onChange }) => {
+}> = ({ defaultValue, onChange }) => {
   const [isCollapse, setIsCollapse] = useState(true)
+  const [value, setValue] = useState(defaultValue)
 
   return (
     <Card>
-      <Card.Header className="d-flex align-items-center user-select-none cursor-pointer" onClick={() => setIsCollapse(!isCollapse)}>
+      <Card.Header
+        className="d-flex align-items-center user-select-none cursor-pointer"
+        onClick={() => setIsCollapse(!isCollapse)}
+      >
         <span>{isCollapse ? <i className="fa-solid fa-eye-slash" /> : <i className="fa-solid fa-eye" />}</span>
         <h2 className="mx-2 mb-0 flex-grow-1">Stage Selection</h2>
         {value ? <span>{STAGES[value].name || ''}</span> : null}
@@ -19,17 +23,20 @@ const StageInput: FC<{
         {Object.keys(STAGES).map(stageId => (
           <div
             key={stageId}
-            className={`stage mb-3 p-3 ${stageId === value ? 'active' : ''}`}
-            onClick={() => onChange?.(stageId)}
+            className={`stage p-3 ${stageId === value ? 'active' : ''}`}
+            onClick={() => {
+              setValue(stageId)
+              onChange?.(stageId)
+            }}
           >
             <Row>
-              <Col xs={6} md={3}>
+              <Col md={3} sm={6}>
                 <div className={`stage-image ${stageId}`} />
               </Col>
-              <Col xs={6} md={9} className="d-flex align-items-center">
-                <div className="d-flex flex-wrap flex-grow-1">
-                  {STAGES[stageId].itemIds.map(item => (
-                    <div key={item} className={`item ${item}`} />
+              <Col md={9} sm={6} className="d-flex align-items-center">
+                <div className="d-flex justify-content-center flex-wrap flex-grow-1">
+                  {STAGES[stageId].itemIds.map(itemId => (
+                    <div key={itemId} className={`item ${itemId}`} />
                   ))}
                 </div>
               </Col>
