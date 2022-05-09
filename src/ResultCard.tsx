@@ -25,14 +25,14 @@ const ResultCard: FC<{
       <Card.Header className="d-flex align-items-center">
         <h2 className="mb-0 d-inline flex-grow-1">
           <a
-            href="https://store.steampowered.com/news/app/1794680/view/3216142491806926560"
+            href="https://store.steampowered.com/news/app/1794680/view/3216143775932561839"
             target="_blank"
             rel="noreferrer"
           >
-            Patch 0.5.1
+            Patch 0.5.2
           </a>
         </h2>
-        <span>2022-04-26</span>
+        <span>2022-05-08</span>
       </Card.Header>
       <Card.Body>
         <Row>
@@ -86,7 +86,7 @@ const ResultCard: FC<{
 
             <div className="d-flex">
               {arcanaIds.map(arcanaId => (
-                <div key={arcanaId} className={`arcana ${arcanaId} mr-2`} />
+                <div key={arcanaId} className={`arcana ${arcanaId} mr-3`} />
               ))}
             </div>
           </Col>

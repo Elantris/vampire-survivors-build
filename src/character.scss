@@ -10,74 +10,43 @@
   }
 }
 
+// ! cspell: disable
+$characterIds: (
+  'Antonio',
+  'Imelda',
+  'Pasqualina',
+  'Gennaro',
+  'Arca',
+  'Porta',
+  'Lama',
+  'Poe',
+  'Clerici',
+  'Dommario',
+  'Krochi',
+  'Christine',
+  'Pugnala',
+  'Giovanna',
+  'Poppea',
+  'Concetta',
+  'Mortaccio',
+  'Cavallo',
+  'Ramba',
+  'OSole',
+  'Exdash',
+  'Toastie',
+  'RedDeath',
+  'Leda'
+);
+// ! cspell: enable
+
 .character {
   padding-top: 100%;
   background-size: cover;
   background-position: center;
 
-  // ! cspell: disable
-  &.Antonio {
-    background-image: url('../public/characters/Select-Antonio.webp');
+  @each $characterId in $characterIds {
+    &.#{$characterId} {
+      background-image: url('../public/characters/#{$characterId}.webp');
+    }
   }
-  &.Imelda {
-    background-image: url('../public/characters/Select-Imelda.webp');
-  }
-  &.Pasqualina {
-    background-image: url('../public/characters/Select-Pasqualina.webp');
-  }
-  &.Gennaro {
-    background-image: url('../public/characters/Select-Gennaro.webp');
-  }
-  &.Arca {
-    background-image: url('../public/characters/Select-Arca.webp');
-  }
-  &.Porta {
-    background-image: url('../public/characters/Select-Porta.webp');
-  }
-  &.Lama {
-    background-image: url('../public/characters/Select-Lama.webp');
-  }
-  &.Poe {
-    background-image: url('../public/characters/Select-Poe.webp');
-  }
-  &.Clerici {
-    background-image: url('../public/characters/Select-Clerici.webp');
-  }
-  &.Dommario {
-    background-image: url('../public/characters/Select-Dommario.webp');
-  }
-  &.Krochi {
-    background-image: url('../public/characters/Select-Krochi.webp');
-  }
-  &.Christine {
-    background-image: url('../public/characters/Select-Christine.webp');
-  }
-  &.Pugnala {
-    background-image: url('../public/characters/Select-Pugnala.webp');
-  }
-  &.Giovanna {
-    background-image: url('../public/characters/Select-Giovanna.webp');
-  }
-  &.Poppea {
-    background-image: url('../public/characters/Select-Poppea.webp');
-  }
-  &.Mortaccio {
-    background-image: url('../public/characters/Select-Mortaccio.webp');
-  }
-  &.Cavallo {
-    background-image: url('../public/characters/Select-Cavallo.webp');
-  }
-  &.Ramba {
-    background-image: url('../public/characters/Select-Ramba.webp');
-  }
-  &.OSole {
-    background-image: url("../public/characters/Select-O'Sole.webp");
-  }
-  &.Exdash {
-    background-image: url('../public/characters/Select-Exdash.webp');
-  }
-  &.RedDeath {
-    background-image: url('../public/characters/Select-Red_Death.webp');
-  }
-  // ! cspell: enable
 }

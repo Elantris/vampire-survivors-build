@@ -39,7 +39,7 @@ const ArcanaInput: FC<{
                 <div className="mb-3">{ARCANAS[arcanaId].description}</div>
                 <div className="d-flex flex-wrap">
                   {ARCANAS[arcanaId].itemIds.map(itemId => (
-                    <div key={itemId} className={`item ${itemId}`} />
+                    <div key={itemId} className={`item ${itemId} m-1`} />
                   ))}
                 </div>
               </Col>

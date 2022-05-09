@@ -65,6 +65,10 @@ export const CHARACTERS: {
     name: 'Poppea Pecorina',
     weaponIds: ['SongOfMana'],
   },
+  Concetta: {
+    name: 'Concetta Caciotta',
+    weaponIds: ['ShadowPinion'],
+  },
   Mortaccio: {
     name: 'Mortaccio',
     weaponIds: ['Bone'],
@@ -85,9 +89,17 @@ export const CHARACTERS: {
     name: 'Exdash Exiviiq',
     weaponIds: ['EbonyWings'],
   },
+  Toastie: {
+    name: 'Toastie',
+    weaponIds: ['Peachone'],
+  },
   RedDeath: {
     name: 'Mask of the Red Death',
     weaponIds: ['DeathSpiral'],
+  },
+  Leda: {
+    name: 'Leda',
+    weaponIds: ['HolyWand'],
   },
 }
 
@@ -243,6 +255,20 @@ export const ITEMS: {
     type: 'evolved-weapon',
     required: ['Pentagram', 'Crown'],
   },
+  Peachone: {
+    name: 'Peachone',
+    type: 'weapon',
+  },
+  EbonyWings: {
+    name: 'Ebony Wings',
+    type: 'weapon',
+  },
+  Vandalier: {
+    name: 'Vandalier',
+    type: 'evolved-weapon',
+    required: ['Peachone', 'EbonyWings'],
+    extraSlots: 1,
+  },
   PhieraDerTuphello: {
     name: 'Phiera Der Tuphello',
     type: 'weapon',
@@ -257,12 +283,17 @@ export const ITEMS: {
     required: ['PhieraDerTuphello', 'EightTheSparrow', 'Tiragisu'],
     extraSlots: 1,
   },
-  SongOfMana: {
-    name: 'Song of Mana',
-    type: 'weapon',
-  },
   GattiAmari: {
     name: 'Gatti Amari',
+    type: 'weapon',
+  },
+  ViciousHunger: {
+    name: 'Vicious Hunger',
+    type: 'evolved-weapon',
+    required: ['GattiAmari', 'StoneMask'],
+  },
+  SongOfMana: {
+    name: 'Song of Mana',
     type: 'weapon',
   },
   Mannajja: {
@@ -270,19 +301,14 @@ export const ITEMS: {
     type: 'evolved-weapon',
     required: ['SongOfMana', 'SkullOManiac'],
   },
-  Peachone: {
-    name: 'Peachone',
+  ShadowPinion: {
+    name: 'Shadow Pinion',
     type: 'weapon',
   },
-  EbonyWings: {
-    name: 'Ebony Wings',
-    type: 'weapon',
-  },
-  Vandalier: {
-    name: 'Vandalier',
+  ValkyrieTurner: {
+    name: 'Valkyrie Turner',
     type: 'evolved-weapon',
-    required: ['Peachone', 'EbonyWings'],
-    extraSlots: 1,
+    required: ['ShadowPinion', 'Wings'],
   },
   ClockLancet: {
     name: 'Clock Lancet',
@@ -407,6 +433,11 @@ export const ARCANAS: {
     description: 'Listed weapon projectiles gain up to 3 bounces. ',
     itemIds: ['MagicWand', 'HolyWand', 'FireWand', 'Hellfire', 'Cross', 'HeavenSword', 'Carrello'],
   },
+  XV: {
+    name: 'Disco of Gold',
+    description: 'Picking up coin bags from the floor triggers Gold Fever. Obtaining gold restores as many HP. ',
+    itemIds: ['StoneMask', 'GoldCoin', 'CoinBag', 'RichCoinBag', 'TreasureChest'],
+  },
   XVI: {
     name: 'Slash',
     description: 'Enables critical hits for listed weapons. Doubles overall critical damage. ',
@@ -416,6 +447,11 @@ export const ARCANAS: {
     name: 'Lost & Found Painting',
     description: 'Overall Duration continuously changes between -50% and +200% over 10 seconds. ',
     itemIds: ['Spellbinder'],
+  },
+  XVIII: {
+    name: 'Boogaloo of Illusions',
+    description: 'Overall Area continuously changes between -25% and +50% over 10 seconds. ',
+    itemIds: ['Candelabrador'],
   },
   XIX: {
     name: 'Heart of Fire',

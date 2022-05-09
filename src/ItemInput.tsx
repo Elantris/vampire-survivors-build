@@ -23,12 +23,9 @@ const CATEGORIES: {
       'Runetracer',
       'LightningRing',
       'Pentagram',
-      'PhieraDerTuphello',
-      'EightTheSparrow',
-      'SongOfMana',
       'GattiAmari',
-      'Peachone',
-      'EbonyWings',
+      'SongOfMana',
+      'ShadowPinion',
     ],
   },
   {
@@ -46,9 +43,9 @@ const CATEGORIES: {
       'Armor',
       'Duplicator',
       'Crown',
-      'Tiragisu',
-      '',
+      'StoneMask',
       'SkullOManiac',
+      'Wings',
     ],
   },
   {
@@ -66,20 +63,26 @@ const CATEGORIES: {
       'NoFuture',
       'ThunderLoop',
       'GorgeousMoon',
-      'Phieraggi',
-      '',
+      'ViciousHunger',
       'Mannajja',
-      '',
-      'Vandalier',
+      'ValkyrieTurner',
     ],
+  },
+  {
+    name: 'Unions Weapons',
+    itemIds: ['Peachone', 'EbonyWings', 'PhieraDerTuphello', 'EightTheSparrow'],
+  },
+  {
+    name: 'Unions Accessories',
+    itemIds: ['', '', 'Tiragisu', ''],
+  },
+  {
+    name: 'Unions Evolution Weapons',
+    itemIds: ['Vandalier', '', 'Phieraggi'],
   },
   {
     name: 'Other Weapons',
     itemIds: ['ClockLancet', 'Laurel', 'Bone', 'CherryBomb', 'Carrello', 'CelestialDusting'],
-  },
-  {
-    name: 'Other Accessories',
-    itemIds: ['Wings', 'StoneMask'],
   },
 ]
 // ! cpsell: enable
@@ -194,7 +197,7 @@ const ItemInput: FC<{
           {CATEGORIES.map(category => (
             <div key={category.name} className="item-list">
               {category.itemIds.map((itemId, index) => {
-                if (!itemId) {
+                if (!itemId || !ITEMS[itemId]) {
                   return (
                     <div key={`empty-${index}`}>
                       <div className="item" />

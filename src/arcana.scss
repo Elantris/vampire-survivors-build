@@ -10,8 +10,12 @@
   }
 }
 
+.arcana-item-wrapper {
+  height: 3rem;
+}
+
 .arcana {
-  min-width: 3rem;
+  min-width: 4rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,18 +42,20 @@
   &.XI {
     background-image: url('../public/arcanas/Sprite-Waltz_of_Pearls.webp');
   }
+  &.XV {
+    background-image: url('../public/arcanas/Sprite-Disco_of_Gold.webp');
+  }
   &.XVI {
     background-image: url('../public/arcanas/Sprite-Slash.webp');
   }
   &.XVII {
     background-image: url('../public/arcanas/Sprite-Lost_&_Found_Painting.webp');
   }
+  &.XVIII {
+    background-image: url('../public/arcanas/Sprite-Boogaloo_of_Illusions.webp');
+  }
   &.XIX {
     background-image: url('../public/arcanas/Sprite-Heart_of_Fire.webp');
   }
   // ! cspell: enable
-}
-
-.arcana-item-wrapper {
-  height: 3rem;
 }

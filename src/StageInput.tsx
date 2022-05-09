@@ -34,9 +34,9 @@ const StageInput: FC<{
                 <div className={`stage-image ${stageId}`} />
               </Col>
               <Col md={9} sm={6} className="d-flex align-items-center">
-                <div className="d-flex justify-content-center flex-wrap flex-grow-1">
+                <div className="d-flex flex-wrap flex-grow-1">
                   {STAGES[stageId].itemIds.map(itemId => (
-                    <div key={itemId} className={`item ${itemId}`} />
+                    <div key={itemId} className={`item ${itemId} m-1`} />
                   ))}
                 </div>
               </Col>

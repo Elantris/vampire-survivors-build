@@ -21,6 +21,75 @@
   }
 }
 
+// ! cspell: disable
+$itemIds: (
+  'Armor',
+  'Attractorb',
+  'Axe',
+  'BloodyTear',
+  'Bone',
+  'Bracer',
+  'Candelabrador',
+  'Carrello',
+  'CelestialDusting',
+  'CherryBomb',
+  'ClockLancet',
+  'Clover',
+  'CoinBag',
+  'Cross',
+  'Crown',
+  'DeathSpiral',
+  'Duplicator',
+  'EbonyWings',
+  'EightTheSparrow',
+  'EmptyTome',
+  'FireWand',
+  'FloorChicken',
+  'Garlic',
+  'GattiAmari',
+  'GoldCoin',
+  'GorgeousMoon',
+  'HeavenSword',
+  'Hellfire',
+  'HollowHeart',
+  'HolyWand',
+  'KingBible',
+  'Knife',
+  'LaBorra',
+  'Laurel',
+  'LightningRing',
+  'MagicWand',
+  'Mannajja',
+  'NoFuture',
+  'Normalbrazer',
+  'Peachone',
+  'Pentagram',
+  'PhieraDerTuphello',
+  'Phieraggi',
+  'Pummarola',
+  'RichCoinBag',
+  'Runetracer',
+  'SantaWater',
+  'ShadowPinion',
+  'SkullOManiac',
+  'SongOfMana',
+  'SoulEater',
+  'Spellbinder',
+  'Spinach',
+  'StoneMask',
+  'ThousandEdge',
+  'ThunderLoop',
+  'Tiragisu',
+  'TreasureChest',
+  'UnholyVespers',
+  'ValkyrieTurner',
+  'Vandalier',
+  'ViciousHunger',
+  'Whip',
+  'Wings'
+);
+// ! cspell: enable
+
 .item {
   width: 100%;
   min-width: 1rem;
@@ -39,179 +108,9 @@
     border: 2px solid var(--oc-gray-6);
   }
 
-  // ! cspell: disable
-  &.Whip {
-    background-image: url('../public/items/Sprite-Whip.webp');
+  @each $itemId in $itemIds {
+    &.#{$itemId} {
+      background-image: url('../public/items/#{$itemId}.webp');
+    }
   }
-  &.BloodyTear {
-    background-image: url('../public/items/Sprite-Bloody_Tear.webp');
-  }
-  &.MagicWand {
-    background-image: url('../public/items/Sprite-Magic_Wand.webp');
-  }
-  &.HolyWand {
-    background-image: url('../public/items/Sprite-Holy_Wand.webp');
-  }
-  &.Knife {
-    background-image: url('../public/items/Sprite-Knife.webp');
-  }
-  &.ThousandEdge {
-    background-image: url('../public/items/Sprite-Thousand_Edge.webp');
-  }
-  &.Axe {
-    background-image: url('../public/items/Sprite-Axe.webp');
-  }
-  &.DeathSpiral {
-    background-image: url('../public/items/Sprite-Death_Spiral.webp');
-  }
-  &.Cross {
-    background-image: url('../public/items/Sprite-Cross.webp');
-  }
-  &.HeavenSword {
-    background-image: url('../public/items/Sprite-Heaven_Sword.webp');
-  }
-  &.KingBible {
-    background-image: url('../public/items/Sprite-King_Bible.webp');
-  }
-  &.UnholyVespers {
-    background-image: url('../public/items/Sprite-Unholy_Vespers.webp');
-  }
-  &.FireWand {
-    background-image: url('../public/items/Sprite-Fire_Wand.webp');
-  }
-  &.Hellfire {
-    background-image: url('../public/items/Sprite-Hellfire.webp');
-  }
-  &.Garlic {
-    background-image: url('../public/items/Sprite-Garlic.webp');
-  }
-  &.SoulEater {
-    background-image: url('../public/items/Sprite-Soul_Eater.webp');
-  }
-  &.SantaWater {
-    background-image: url('../public/items/Sprite-Santa_Water.webp');
-  }
-  &.LaBorra {
-    background-image: url('../public/items/Sprite-La_Borra.webp');
-  }
-  &.Runetracer {
-    background-image: url('../public/items/Sprite-Runetracer.webp');
-  }
-  &.NoFuture {
-    background-image: url('../public/items/Sprite-NO_FUTURE.webp');
-  }
-  &.LightningRing {
-    background-image: url('../public/items/Sprite-Lightning_Ring.webp');
-  }
-  &.ThunderLoop {
-    background-image: url('../public/items/Sprite-Thunder_Loop.webp');
-  }
-  &.Pentagram {
-    background-image: url('../public/items/Sprite-Pentagram.webp');
-  }
-  &.GorgeousMoon {
-    background-image: url('../public/items/Sprite-Gorgeous_Moon.webp');
-  }
-  &.PhieraDerTuphello {
-    background-image: url('../public/items/Sprite-Phiera_Der_Tuphello.webp');
-  }
-  &.EightTheSparrow {
-    background-image: url('../public/items/Sprite-Eight_The_Sparrow.webp');
-  }
-  &.Phieraggi {
-    background-image: url('../public/items/Sprite-Phieraggi.webp');
-  }
-  &.SongOfMana {
-    background-image: url('../public/items/Sprite-Song_of_Mana.webp');
-  }
-  &.GattiAmari {
-    background-image: url('../public/items/Sprite-Gatti_Amari.webp');
-  }
-  &.Mannajja {
-    background-image: url('../public/items/Sprite-Mannajja.webp');
-  }
-  &.Peachone {
-    background-image: url('../public/items/Sprite-Peachone.webp');
-  }
-  &.EbonyWings {
-    background-image: url('../public/items/Sprite-Ebony_Wings.webp');
-  }
-  &.Vandalier {
-    background-image: url('../public/items/Sprite-Vandalier.webp');
-  }
-  &.ClockLancet {
-    background-image: url('../public/items/Sprite-Clock_Lancet.webp');
-  }
-  &.Laurel {
-    background-image: url('../public/items/Sprite-Laurel.webp');
-  }
-  &.Bone {
-    background-image: url('../public/items/Sprite-Bone.webp');
-  }
-  &.CherryBomb {
-    background-image: url('../public/items/Sprite-Cherry_Bomb.webp');
-  }
-  &.Carrello {
-    background-image: url('../public/items/Sprite-Carrello.webp');
-  }
-  &.CelestialDusting {
-    background-image: url('../public/items/Sprite-Celestial_Dusting.webp');
-  }
-
-  &.Spinach {
-    background-image: url('../public/items/Sprite-Spinach.webp');
-  }
-  &.Armor {
-    background-image: url('../public/items/Sprite-Armor.webp');
-  }
-  &.HollowHeart {
-    background-image: url('../public/items/Sprite-Hollow_Heart.webp');
-  }
-  &.Pummarola {
-    background-image: url('../public/items/Sprite-Pummarola.webp');
-  }
-  &.EmptyTome {
-    background-image: url('../public/items/Sprite-Empty_Tome.webp');
-  }
-  &.Candelabrador {
-    background-image: url('../public/items/Sprite-Candelabrador.webp');
-  }
-  &.Bracer {
-    background-image: url('../public/items/Sprite-Bracer.webp');
-  }
-  &.Spellbinder {
-    background-image: url('../public/items/Sprite-Spellbinder.webp');
-  }
-  &.Duplicator {
-    background-image: url('../public/items/Sprite-Duplicator.webp');
-  }
-  &.Wings {
-    background-image: url('../public/items/Sprite-Wings.webp');
-  }
-  &.Attractorb {
-    background-image: url('../public/items/Sprite-Attractorb.webp');
-  }
-  &.Clover {
-    background-image: url('../public/items/Sprite-Clover.webp');
-  }
-  &.Crown {
-    background-image: url('../public/items/Sprite-Crown.webp');
-  }
-  &.StoneMask {
-    background-image: url('../public/items/Sprite-Stone_Mask.webp');
-  }
-  &.SkullOManiac {
-    background-image: url("../public/items/Sprite-Skull_O'Maniac.webp");
-  }
-  &.Tiragisu {
-    background-image: url('../public/items/Sprite-Tiragisu.webp');
-  }
-
-  &.FloorChicken {
-    background-image: url('../public/items/Sprite-Floor_Chicken.webp');
-  }
-  &.NormalBrazer {
-    background-image: url('../public/items/Normal_brazer.webp');
-  }
-  // ! cspell: enable
 }
